@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {list-style: none;}
+        .menu > li {width: 20%;float: left;text-align: center;line-height: 60px;background-color: #3951b3;}
+        .menu a {color: #fff;text-decoration: none;}
+        .submenu > li {line-height: 50px;background-color: #94a9ff;}
+        .submenu {display: none;}
+        .menu > li:hover {background-color: #94a9ff;transition-duration: 0.5s;}
+        .menu > li:hover .submenu {display: block;}
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li >
+            <a href="#">Menu1</a>
+            <ul class="submenu">
+                <li><a href="#">submenu</a></li>
+                <li><a href="#">submenu</a></li>
+                <li><a href="#">submenu</a></li>
+                <li><a href="#">submenu</a></li>
+                <li><a href="#">submenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+        <li><a href="#">Menu5</a></li>
+    </ul>
+</body>
+</html>
