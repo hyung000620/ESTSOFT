@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign_up.css">
+    
+</head>
+<body>
+    <form action="target-page.html" method="get">
+        <h1>회원가입</h1>
+        <div>
+            <label for="username" required>사용자명:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="email" required>이메일:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password" required>비밀번호:</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="password2" required>비밀번호 확인:</label>
+            <input type="password2" id="password2" name="password2" required>
+        </div>
+
+        <div>
+            <label for="hobby" >취미:</label>
+            <input type="checkbox" id="hobby1" name="hobby" value="독서">
+            <label for="hobby1" >독서</label>
+            <input type="checkbox" id="hobby2" name="hobby" value="등산">
+            <label for="hobby2" >등산</label>
+            <input type="checkbox" id="hobby3" name="hobby" value="요리">
+            <label for="hobby3" >요리</label><br>
+
+        </div>
+        <div>
+            <label for="gender" >성별 :</label>
+            <input type="radio" id="gender1" name="gender" value="남자">
+            <label for="gender1" >남자</label>
+            <input type="radio" id="gender2" name="gender" value="여자">
+            <label for="gender2" >여자</label>
+        </div>
+        <div>
+            <label for="city">도시:</label>
+            <select id="city" name="city">
+                <option value="서울">서울</option>
+                <option value="뉴욕">뉴욕</option>
+                <option value="도쿄">도쿄</option>
+                <option value="런던">런던</option>
+            </select>
+        </div>
+        <div>
+            <label for="birth">생년월일</label>
+            <select id="y" name="y">
+                <option value="">연</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+            </select>
+            <select id="m" name="m">
+                <option value="">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <select id="d" name="d">
+                <option value="">일</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div>
+            <label for="terms">이용 약관에 동의합니다.</label>
+            <input type="checkbox" id="terms" name="terms" value="terms">
+        </div>
+        <div>
+            <input class="btn" type="submit">
+        </div>
+    </form>
+</body>
+</html>

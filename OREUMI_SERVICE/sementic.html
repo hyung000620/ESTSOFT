@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black;}
+        .gray{background-color: gray; width: 100%; padding: 40px;}
+        .white{background-color: white; width: 100%; padding: 10px;}
+        .wrap{display: flex; flex-direction: column; gap: 20px; justify-content: space-evenly;}
+        .box{display: flex; justify-content: space-between; width: 100%;}
+        .section{display: flex; flex-direction: column; gap: 20px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="gray">header</div>
+        </header>
+        <div class="box">
+            <nav>
+                <div class="gray" style="height: 72%;">nav</div>
+            </nav>
+            <section>
+                <div class="gray section">
+                    section
+                    <header>
+                        <div class="white">header</div>
+                    </header>
+                    <article>
+                        <div class="white">article</div>
+                    </article>
+                    <footer>
+                        <div class="white">footer</div>
+                    </footer>
+                </div>
+            </section>
+            <aside>
+                <div class="gray" style="height: 72%;">aside</div>
+            </aside>
+        </div>
+        <footer>
+            <div class="gray"> footer</div>
+        </footer>
+    </div>
+</body>
+</html>
