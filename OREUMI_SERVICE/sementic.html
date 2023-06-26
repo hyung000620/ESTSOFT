@@ -11,6 +11,15 @@
         .wrap{display: flex; flex-direction: column; gap: 20px; justify-content: space-evenly;}
         .box{display: flex; justify-content: space-between; width: 100%;}
         .section{display: flex; flex-direction: column; gap: 20px;}
+        footer{padding: 0px;}
+        img{ object-fit: cover;}
+        @media (max-width:500px){
+            .box{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -41,7 +50,7 @@
             </aside>
         </div>
         <footer>
-            <div class="gray"> footer</div>
+            <div class="gray" style="padding: 0px;"><img src="img/이스트소프트오르미2기.png" style="width: 100%;"></div>
         </footer>
     </div>
 </body>
