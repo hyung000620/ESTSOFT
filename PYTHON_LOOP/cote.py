@@ -145,13 +145,158 @@
 #     elif m == "lb":print(f"{n*0.4536:0.4f} kg")
 #     elif m == "l":print(f"{n*0.2642:0.4f} g")
 #     else:print(f"{n*3.7854:0.4f} l")
+# import sys
+
+# N,X,K = map(int, sys.stdin.readline().split())
+# cup = [0]*(N+1)
+# cup[X] = 1
+# for i in range(K):
+#     A,B= map(int, sys.stdin.readline().split())
+#     cup[A],cup[B]=cup[B],cup[A]
+
+# print(cup.index(1))
+
+
+# import sys
+# input = sys.stdin.readline
+
+# t = int(input())
+
+# for _ in range(t):
+#   alphabet = [0] * 27
+#   value = input().rstrip()
+#   for i in range(len(value)):
+#     alphabet[int(ord(value[i])) - 65] += 1
+
+#   result = 0
+#   for i in range(26) :
+#     if alphabet[i] == 0 :
+#       result += i + 65
+
+#   print(result)
+
+
+
+# N,M = map(int, sys.stdin.readline().split())
+# arr=[0]*(N+1)
+# for i in range(M):
+#     A,B = map(int, sys.stdin.readline().split())
+#     arr[A]+=1
+#     arr[B]+=1
+
+# for i in range(1,N+1):
+#     print(arr[i])
+
+
+# N = int(input())
+# text=[]
+
+# text.append("int a;")
+# text.append("int *ptr = &a;")
+# if N>1:
+#     for i in range(2,N+1):
+#        star = "*"*i
+#        p=i-1
+#        if p==1:p=""
+#        text.append(f"int {star}ptr{i} = &ptr{p};") 
+
+# for i in range(len(text)):
+#     print(text[i])
+
+# score = list(map(int, input().split()))
+
+# max_score = [100,100,200,200,300,300,400,400,500]
+# h = False
+# for i in range(9):
+#     if score[i] > max_score[i]:
+#         h = True
+#         break
+# if h : print("hacker")
+# elif sum(score) <100:print("none")
+# else : print("draw")
+
+# n = int(input())
+# arr = []
+# for i in range(n):
+#     name,score=input().split()
+#     score= int(score)
+#     if score >96: arr.append(f"{name} A+")
+#     elif score >89: arr.append(f"{name} A")
+#     elif score >86: arr.append(f"{name} B+")
+#     elif score >79: arr.append(f"{name} B")
+#     elif score >76: arr.append(f"{name} C+")
+#     elif score >69: arr.append(f"{name} C")
+#     elif score >66: arr.append(f"{name} D+")
+#     elif score >59: arr.append(f"{name} D")
+#     else: arr.append(f"{name} F")
+
+# print(*arr,sep='\n')
+
+# import sys
+# input = sys.stdin.readline
+
+# T = int(input())
+# for i in range(T):
+#     sum = 0
+#     for day in range(int(input())):
+#         tmp = list(map(int, input().split()))
+#         if max(tmp)>0:sum+=max(tmp)
+#     print(sum)
+
+# s=0
+# while True:    
+#     try:       
+#         _ = input()        
+#         s+=1    
+#     except EOFError:        
+#         break
+# print(s)
+
+# import sys
+# input = sys.stdin.readline
+
+# N = int(input())
+# mirror = [input().strip() for _ in range(N)]
+# K= int(input())
+
+# if K==1:print(*mirror,sep='\n')
+# elif K==2:print(*[i[::-1] for i in mirror],sep='\n')
+# else: print(*mirror[::-1],sep='\n')
+
+# import sys
+# input = sys.stdin.readline
+
+# T = int(input())
+# result = []
+# for i in range(1,T+1):
+#     good = list(map(int,input().split()))
+#     evil = list(map(int,input().split()))
+#     good_score = good[0] + good[1]*2 + good[2]*3 + good[3]*3 + good[4]*4 + good[5]*10
+#     evil_score = evil[0] + evil[1]*2 + evil[2]*2 + evil[3]*2 + evil[4]*3 + evil[5]*5 + evil[6]*10
+    
+#     if good_score<evil_score: result.append(f"Battle {i}: Evil eradicates all trace of Good")
+#     elif good_score>evil_score:result.append(f"Battle {i}: Good triumphs over Evil")
+#     else: result.append(f"Battle {i}: No victor on this battle field")
+
+# print(*result,sep='\n')
+
 import sys
+input = sys.stdin.readline
 
-N,X,K = map(int, sys.stdin.readline().split())
-cup = [0]*(N+1)
-cup[X] = 1
-for i in range(K):
-    A,B= map(int, sys.stdin.readline().split())
-    cup[A],cup[B]=cup[B],cup[A]
+def factorial(n):
+    sum = 1
+    for i in range(1,n+1):sum*=i
+    return sum
 
-print(cup.index(1))
+result = []
+while 1:
+    a = input().strip()
+    if int(a) == 0: break
+    
+    tmp = 0
+    r_a = a[::-1]
+    for idx, i in enumerate(r_a,start=1):
+        tmp += factorial(idx)*int(i)
+    result.append(tmp)
+
+print(*result,sep='\n')
