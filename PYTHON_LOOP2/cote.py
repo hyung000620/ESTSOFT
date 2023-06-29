@@ -152,3 +152,66 @@
 #     print('*'*i)
 # for i in range(1,a):
 #     print('*'*(a-i))
+
+
+# g_dict = {
+#     "A+":4.5
+#     ,"A0":4.0
+#     ,"B+":3.5
+#     ,"B0":3.0
+#     ,"C+":2.5
+#     ,"C0":2.0
+#     ,"D+":1.5
+#     ,"D0":1.0
+#     ,"F":0.0
+# }
+# sum = 0
+# sum2 = 0
+# for i in range(20):
+#     subject, score, grade = map(str, input().split())
+#     if grade =='P': continue
+#     else:
+#         sum += float(score)*g_dict[grade]
+#         sum2 += float(score)
+# print(f"{sum/sum2:.6f}")
+'''
+Python에서는 * 연산자를 이용해 배열을 선언하게 되면, 얕은 복사(shallow copy)가 진행된다.
+즉, 배열 내의 요소들이 같은 객체를 가리키게 되는 것이다.
+따라서, 이 방식으로 2차원 배열을 선언하고 요소를 변경하게 되면 다른 요소들의 값도 같이 바뀌는 것이다.
+'''
+# arr = [[0]*101]*101
+
+# T = int(input())
+# arr = [[0 for i in range(101)] for i in range(101)]
+
+# for i in range(T):
+#     x, y = list(map(int, input().split()))
+    
+#     for a in range(x,x+10):
+#         for b in range(y, y+10):
+#             arr[a][b] = 1
+
+# result = 0
+# for i in arr:
+#     result += sum(i)
+    
+# print(result)
+
+# n = int(input())
+
+# for i in range(n):
+#     t = int(input())
+#     if t == 1:
+#         print("#") 
+#     else:
+#         print("#"*t)
+#         for j in range(t-2):
+#             print("#"+"J"*(t-2)+"#")
+#         print("#"*t)
+#     print()
+
+# while True:
+#     s = input()
+#     if s == "***":break
+    
+#     print(s[::-1])
