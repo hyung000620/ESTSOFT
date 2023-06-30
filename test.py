@@ -153,6 +153,252 @@ y = (A * F - C * D) // (A * E - B * D)
 # print(c)
 
 #11
-import sys
-for line in sys.stdin:
-    sys.stdout.write(line)
+# import sys
+# for line in sys.stdin:
+#     sys.stdout.write(line)
+    
+# [], 1, "False", {}, None, not True, [None]
+
+# N = int(input())
+# A = list(map(int, input().split()))
+# B,C = map(int, input().split())
+
+# num=N
+# for i in A:
+#     i-=B
+#     if i>0:
+#         if i%C: num+=(i//C)+1
+#         else: num +=(i//C)
+
+# print(num)
+
+# t = int(input())  # 테스트 케이스의 개수
+
+# for _ in range(t):
+#     n, k, x = map(int, input().split())  # n, k, x 입력받기
+
+#     if (k-1) * (k-2) // 2 >= n-1:  # 가능한 경우인지 확인
+#         print("NO")
+#     else:
+#         print("YES")
+#         taken = []
+#         for i in range(1, k+1):
+#             if i != x:
+#                 taken.append(i)
+#                 n -= i
+#                 if n == 0:
+#                     break
+#         print(len(taken))
+#         print(" ".join(map(str, taken)))
+
+# S = input()
+
+# result=""
+# for c in S:
+#     tmp = c
+#     if ord("A")<=ord(c)<=ord("Z"):
+#         tmp = ord(c)+13
+#         if ord("Z")<tmp: tmp=ord("A")+(tmp-ord("Z")-1)
+#         tmp = chr(tmp)
+#     elif ord("a")<=ord(c)<=ord("z"):
+#         tmp = ord(c)+13
+#         if ord("z")<tmp: tmp=ord("a")+(tmp-ord("z")-1)
+#         tmp = chr(tmp)
+        
+#     result+=tmp
+        
+# print(result)
+
+# result=[]
+# while True:
+#     n = int(input())
+#     if n == -1: break
+#     li = []
+#     li.append(1)
+#     for i in range(2,n//2):
+#         if n%i==0:
+#             li.append(i)
+#             li.append(n//i)
+#     li = list(set(li))
+#     li.sort()
+#     if n == sum(li):
+#         st = " + ".join(map(str, li))
+#         result.append(f"{n} = {st}")
+#     else:
+#         result.append(f"{n} is NOT perfect.")
+
+# print(*result,sep='\n')
+
+# n = input()
+
+# # 2진수 -> 10진수 변환 
+# d = int(n,2)
+
+# # 10진수 -> 8진수 변환 
+# print(oct(d)[2:])
+
+# num = list(map(int, input().split()))
+
+# while True:
+#     if num == [1,2,3,4,5]:break
+#     for i in range(len(num)-1):
+#         if num[i]>num[i+1]:
+#             num[i],num[i+1]=num[i+1],num[i]
+#             print(*num,sep=' ')
+
+# def Rev(x):
+#     return int(x[::-1])
+# X,Y = input().split()
+# result = Rev(X)+Rev(Y)
+# result = Rev(str(result))
+# print(result)
+
+# N = int(input())
+# for i in range(1,N+1):
+#     arr = list(map(str, input().split()))
+#     arr = arr[::-1]
+#     st = " ".join(arr)
+#     print(f"Case #{i}: {st}")
+
+# s = input()
+# sad = s.count(":-(")
+# happy = s.count(":-)")
+
+# if sad == 0 and happy == 0:print('none')
+# elif sad > happy:print("sad")
+# elif sad < happy:print("happy")
+# elif sad == happy: print("unsure")
+
+
+# s1, s2 = map(str, input().split())
+
+# for i in range(len(s1)):
+#     if s1[i] in s2:
+#         col = i
+#         row = s2.index(s1[i])
+#         break
+    
+# for i in range(len(s2)):
+#     if i == row:
+#         print(s1)
+#     else:
+#         print('.'*col + s2[i] + '.'*(len(s1)-col-1))
+# s = ''
+# while 1:
+#     try:
+#         s += input()
+#     except:
+#         break
+# print(sum(map(int, s.split(','))))
+
+# H1,M1,S1=map(int, input().split(":")) #현재 시간
+# H2,M2,S2=map(int, input().split(":")) #임무를 시작한 시간
+
+# rh,rm,rs=0,0,0
+# S2-S1
+
+#3
+'''
+```py
+def MenOfPassion(A,n):
+    sum = 0
+    for i in range(n):
+        for j in range(n):
+            sum += A[i]*A[j]
+    return sum
+```
+'''
+# def merge_sort(arr):
+#     if len(arr) <= 1:
+#         return arr
+#     mid = len(arr) // 2
+#     left = arr[:mid]
+#     right = arr[mid:]
+#     left = merge_sort(left)
+#     right = merge_sort(right)
+#     return merge(left, right)
+
+# def merge(left, right):
+#     result = []
+#     i = j = 0
+#     while i < len(left) and j < len(right):
+#         if left[i] <= right[j]:
+#             result.append(left[i])
+#             i += 1
+#         else:
+#             result.append(right[j])
+#             j += 1
+#     result.extend(left[i:])
+#     result.extend(right[j:])
+#     print(result)
+#     return result
+
+
+# arr=[1,4,6,2,3,5,6,8]
+# arr = merge_sort(arr)
+# print(arr)
+
+
+# def MenOfPassion(A,n):
+#     cnt = 0
+#     for i in range(n-1):
+#         for j in range(i+1,n):
+#             cnt +=1
+#     return cnt
+
+# A=[1,2,3,4,5,6]
+# n = len(A)
+# print(MenOfPassion(A,n))
+
+'''
+n: 2, 1번수행
+n: 3, 3번수행
+n :4, 6번수행
+n :5, 10번 수행
+n :6, 15번수행
+'''
+# n = int(input())
+
+# print(int((n-1)*n-(n-1)*n/2))
+# print(2)
+# #5
+# def MenOfPassion(A, n):
+#     sum = 0
+#     for i in range(n):
+#         for j in range(n):
+#             for k in range(n):
+#                 sum += A[i] * A[j] * A[k]
+#     return sum
+# #6
+def MenOfPassion(A, n):
+    sum = 0
+    for i in range(n-2):
+        for j in range(i+1, n-1):
+            for k in range(j+1, n):
+                sum += A[i] * A[j] * A[k]
+                print(A[i],A[j],A[k])
+    return sum
+
+A=[1,2,3,4,5]
+n = len(A)
+MenOfPassion(A,n)
+'''
+n: 2, 0번수행
+n: 3, 1번수행
+n :4, 4번수행
+n :5, 10번 수행
+n :6, 20번수행
+n :7, 35번수행
+1,3,6,10,15
+
+nCr : 서로 다른 n개에서 순서를 생각하지 않고 r개를 택하는 경우의 수.
+nCr = n!/(n-r)!r! = nPr/r! = {n(n-1)(n-2)...(n-r+1)}/r!
+'''
+# import sys
+# input = sys.stdin.readline
+# print = sys.stdout.write
+
+# N = int(input())
+# arr = [int(input()) for _ in range(N)]
+# arr.sort()
+# print("\n".join(map(str, arr)))
