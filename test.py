@@ -370,18 +370,18 @@ n :6, 15번수행
 #                 sum += A[i] * A[j] * A[k]
 #     return sum
 # #6
-def MenOfPassion(A, n):
-    sum = 0
-    for i in range(n-2):
-        for j in range(i+1, n-1):
-            for k in range(j+1, n):
-                sum += A[i] * A[j] * A[k]
-                print(A[i],A[j],A[k])
-    return sum
+# def MenOfPassion(A, n):
+#     sum = 0
+#     for i in range(n-2):
+#         for j in range(i+1, n-1):
+#             for k in range(j+1, n):
+#                 sum += A[i] * A[j] * A[k]
+#                 print(A[i],A[j],A[k])
+#     return sum
 
-A=[1,2,3,4,5]
-n = len(A)
-MenOfPassion(A,n)
+# A=[1,2,3,4,5]
+# n = len(A)
+# MenOfPassion(A,n)
 '''
 n: 2, 0번수행
 n: 3, 1번수행
@@ -402,3 +402,58 @@ nCr = n!/(n-r)!r! = nPr/r! = {n(n-1)(n-2)...(n-r+1)}/r!
 # arr = [int(input()) for _ in range(N)]
 # arr.sort()
 # print("\n".join(map(str, arr)))
+
+# def recursion(s, l, r):
+#     if l >= r: return 1
+#     elif s[l] != s[r]: return 0
+#     else: return recursion(s, l+1, r-1)
+
+# def isPalindrome(s):
+#     return recursion(s, 0, len(s)-1)
+
+
+# N = int(input())
+# for i in range(N):
+#     s = input()
+#     cnt = 1
+#     for j in range(len(s)//2):
+#         if s[j]==s[len(s)-j-1]:cnt+=1
+#         else:break
+#     print(isPalindrome(s), cnt)
+
+# import sys
+# input = sys.stdin.readline
+
+# N,K = map(int, input().split()) #N:참가하는 학생 수, K:한 방에 배정할 수 있는 학생 수
+
+# result = 0
+# arr = []
+# arr2 = []
+# for i in range(N):
+#     S,Y = map(str, input().split()) #S:성별(여학생:0, 남학생:1), Y:학년
+#     arr.append(S+Y)
+
+# arr2 = list(set(arr))
+
+# for i in arr2:
+#     tmp = arr.count(i)
+#     if tmp%K==0:
+#         result+= tmp//K
+#     else:
+#         result+= tmp//K+1
+# print(result)
+
+# import sys
+# input = sys.stdin.readline
+
+# N = int(input())
+# stack = [int(input()) for i in range(N)]
+
+# result = 1
+# tmp = stack[N-1]
+# for i in range(N-2,-1,-1):
+#     if tmp<stack[i]:
+#         result+=1
+#         tmp = stack[i]
+# print(result)
+    
