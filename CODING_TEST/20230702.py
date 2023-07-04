@@ -105,19 +105,108 @@
 # print(apartments)
 
 
-class Car:
-    def  __init__(self, model, car_type="electric"):
-          self.model = model
-          self.wheel = 4
-          self.speed = 50
-          self.car_type = car_type
-    def brake(self):
-          self.speed -= 50
-    def accelerate(self):
-          self.speed += 50
+# class Car:
+#     def  __init__(self, model, car_type="electric"):
+#           self.model = model
+#           self.wheel = 4
+#           self.speed = 50
+#           self.car_type = car_type
+#     def brake(self):
+#           self.speed -= 50
+#     def accelerate(self):
+#           self.speed += 50
 
-my_car = Car("Tesla")
-my_car.accelerate()
-my_car.accelerate()
-my_car.brake()
-print(my_car.model, my_car.wheel, my_car.speed)
+# my_car = Car("Tesla")
+# my_car.accelerate()
+# my_car.accelerate()
+# my_car.brake()
+# print(my_car.model, my_car.wheel, my_car.speed)
+
+# t = int(input())
+# for i in range(t):
+#       n,m = map(int,input().split())
+#       print(11*m+4 if n >11 and m>3 else -1)
+
+# import sys
+# input = sys.stdin.readline
+
+# while True:
+#       a,b = input().split()
+      
+#       if a=="0" and b=="0":break
+      
+#       size = abs(len(a)-len(b))
+      
+#       for i in range(size):
+#             if len(a)<len(b):a='0'+a
+#             else:b='0'+b
+      
+#       carry = cnt = 0
+      
+#       for i in range(len(a)-1,-1,-1):
+#             carry = len(str(int(a[i])+int(b[i])+carry))-1
+#             if carry ==1 : cnt+=1
+#       print(cnt)
+
+
+# n = list(map(int,input()))
+
+# result=0
+# for i in n:
+#     result += i**5
+# print(result)
+
+# t = int(input())
+
+# for i in range(t):
+#     n = input()
+    
+#     result = str(int(n)+int(n[::-1]))
+    
+#     if result == result[::-1]:print("YES")
+#     else: print("NO")
+
+# t = int(input())
+
+# for i in range(t):
+#     n = int(input())
+#     x = sorted(map(int,input().split()))
+#     result = (x[-1]-x[0])*2
+#     print(result)
+
+# for i in range(1000, 10000):
+
+#     #16진수
+#     num = i
+#     sixteen = 0 
+#     while num != 0:
+#         sixteen += num % 16
+#         num //= 16
+
+#     #12진수
+#     num = i
+#     twelve = 0
+#     while num != 0:
+#         twelve += num % 12
+#         num //= 12
+
+#     #10진수
+#     num = i
+#     ten = 0
+#     while num != 0:
+#         ten += num % 10
+#         num //= 10
+
+#     if sixteen == twelve == ten:
+#         print(i)
+
+# t = int(input())
+
+# for i in range(t):
+#     x = list(set(input()))
+#     print(len(x))
+
+t = int(input())
+
+li = list(map(int, input().split()))
+print(sum(li)-max(li))
