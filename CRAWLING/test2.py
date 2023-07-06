@@ -32,4 +32,18 @@
             
 #     print("no" if len(stack) else "yes")     
     
-    
+# import re
+
+# text = "I love Programming. Today, I learn Crawling."
+
+# pattern = r"\b\w+ing\b"
+# result = re.findall(pattern, text)
+# print(result)
+
+
+# n = int(input())
+
+# for i in range(n):
+#     s = input()
+#     print(int(s,2))
+
