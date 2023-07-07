@@ -89,15 +89,59 @@
 # S, command = set(str[:N]), str[N:]
 # print(sum(1 for i in command if i in S))
 
-import sys
+# import sys
 
-n,m = map(int, sys.stdin.readline().strip().split())
-str = sys.stdin.read().split()
+# input = sys.stdin.readline
 
-n_arr,m_arr = str[:n], str[n:]
+# n,m = map(int, input().split())
+# n_dic = {}
+# for i in range(1,n+1):
+#     p = input().strip()
+#     n_dic[str(i)] = p
+#     n_dic[p] = i
 
-dic = {i:n_arr[i] for i in range(len(n_arr))}
+# li = []
+# for i in range(m):
+#     s = input().strip()
+#     li.append(n_dic[s])
+    
 
-print(dic)
-   
+# print(*li,sep='\n')
 
+
+# import sys
+
+# input = sys.stdin.readline
+
+# n,m = map(int, input().split())
+
+# ns = set(input().strip() for i in range(n))
+# ms = set(input().strip() for i in range(m))
+
+# li = sorted(ns&ms)
+
+# print(len(li))
+# print(*li, sep='\n')
+
+
+# s=input()
+# n=len(s)
+# se=set()
+# for i in range(n):
+#     for j in range(i,n):
+#         se.add(s[i:j+1])
+
+# print(len(se))
+
+# while True:
+#     li = input().split()
+#     if li[0]=="0":break
+#     arr=[]
+#     arr.append(li[1])
+#     for i in li[2:]:
+#         if i != arr[-1]:
+#             arr.append(i)
+    
+#     arr.append("$")
+#     print(*arr, sep=' ')
+    
