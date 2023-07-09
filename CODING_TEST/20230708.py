@@ -65,3 +65,15 @@
 #         elif prime(num):print(num);break
 #         num+=1
 
+# import sys
+# input = sys.stdin.readline
+
+# N,L = map(int, input().split())
+
+# fruits = sorted(map(int,input().split()))
+
+# for f in fruits:
+#     if f<=L:
+#         L+=1
+        
+# print(L)
