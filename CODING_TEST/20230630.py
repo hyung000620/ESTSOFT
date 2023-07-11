@@ -137,3 +137,40 @@
 
 # print(*arr,sep='\n')
 
+def find_minimum_video_size(N, M, lecture_lengths):
+    # 가능한 영상 크기의 최소값과 최대값 초기화
+    start = max(lecture_lengths)
+    end = sum(lecture_lengths)
+    
+    result = 0
+
+    # 이분 탐색을 통해 가능한 영상 크기의 최소값을 구함
+    while start <= end:
+        mid = (start + end) // 2  # 가능한 영상 크기의 중간값
+        
+        count = 1  
+        total_length = 0  # 현재 영상 파일의 길이 초기화
+        
+        for length in lecture_lengths:
+            if total_length + length > mid:
+                count += 1
+                total_length = 0
+            
+            total_length += length  
+        
+        if count <= M:
+            result = mid
+            end = mid - 1
+        else:
+            start = mid + 1
+    
+    return result
+
+
+# 입력 예시
+N, M = map(int, input().split())
+lecture_lengths = list(map(int, input().split()))
+
+# 함수 호출 및 결과 출력
+result = find_minimum_video_size(N, M, lecture_lengths)
+print(result)
