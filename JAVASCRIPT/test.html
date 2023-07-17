@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>테스트</title>
+  <style>
+    .boldText{
+        font-weight: 800;
+        font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <a>Hello, World!</a>
+    <button class="alert">버튼1</button>
+    <button class="alert">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+    <p class="description">This is a paragraph.</p>
+    <p class="description">This is another paragraph.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+</body>
+
+</html>
+<script>
+// 1. div 요소를 선택하고 변수 container 에 할당하세요
+const container = document.getElementById('container');
+
+// 2. Hello, world에 클래스('boldText')를 추가하세요
+const helloWorld = document.querySelector('#container > a');
+helloWorld.classList.add('boldText');
+
+// 3. forEach 메서드를 이용해 Item 1, 2, 3의 텍스트 컬러를 파랑색으로 바꾸세요
+const li = document.querySelectorAll('li');
+li.forEach(e =>{
+    e.style.color = 'blue';
+});
+
+// 4. 버튼1, 2만 클릭시에 알림창이 뜨도록 바꾸세요
+const btns = document.querySelectorAll('.alert');
+function alim(){
+    alert('알림창이 뜹니다.');
+}
+btns.forEach(btn =>{
+    btn.addEventListener('click',alim);
+});
+
+// 5. 'This is another paragraph.'를 '이것은 문장입니다'로 바꾸세요
+const paragraph = document.querySelector('.description:nth-of-type(2)');
+paragraph.textContent = "이것은 문장입니다.";
+
+// 6. div 내에 <h2>Bye, world!</h2>를 추가하세요
+const byeWorld = document.createElement('h2');
+byeWorld.textContent = 'Bye, world!';
+container.appendChild(byeWorld);
+
+// 7. Item 2 요소를 제거하세요
+const item2 = document.querySelector('li:nth-child(2)')
+item2.remove()
+
+//3번 누르면 없어지는 버튼
+const btn3 = document.getElementById('btn3');
+let idx=0;
+btn3.addEventListener('click', ()=>{
+  idx++;
+  if (idx===3){
+    btn3.remove();
+  }
+});
+
+</script>

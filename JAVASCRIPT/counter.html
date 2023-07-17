@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>카운터 페이지</title>
+  <style>
+    #counterContainer {text-align: center;}
+    #countDisplay {font-size: 48px;font-weight: bold;margin-bottom: 20px;}
+    #buttons button {font-size: 18px;margin: 5px;}
+    #progressBar {height: 20px;background-color: lightgray;margin-bottom: 20px;transition: width 0.5s ease-in-out;}
+    #progressBar.filled {background-color: blue;}
+  </style>
+</head>
+<body>
+  <h1>카운터 페이지</h1>
+  <div id="counterContainer">
+    <div id="countDisplay">0</div>
+    <div id="progressBar"></div>
+    <div id="buttons">
+      <button id="decreaseBtn">감소</button>
+      <button id="resetBtn">리셋</button>
+      <button id="increaseBtn">증가</button>
+    </div>
+  </div>
+
+  <!-- <script src="멘토_3.js"></script> -->
+</body>
+</html>
+<script>
+var doc = document;
+const dec = doc.getElementById('decreaseBtn');
+const res = doc.getElementById('resetBtn');
+const inc = doc.getElementById('increaseBtn');
+const dis = doc.getElementById('countDisplay');
+const pro = doc.getElementById('progressBar');
+
+let cnt = 0;
+dec.addEventListener('click',()=>{
+    cnt--;
+    dis.innerText = cnt;
+    update();
+});
+res.addEventListener('click',()=>{
+    cnt = 0;
+    dis.innerText = cnt;
+    update();
+});
+inc.addEventListener('click',()=>{
+    cnt++;
+    dis.innerText = cnt;
+    update();
+});
+
+function update() {
+      const max = 20;
+      let percent = (cnt / max) * 100;
+      pro.style.width = `${percent}%`;
+
+      if (percent >= 100) {
+        pro.classList.add('filled');
+      } else {
+        pro.classList.remove('filled');
+      }
+    }
+</script>
