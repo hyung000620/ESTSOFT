@@ -3,10 +3,12 @@ Pi = list(map(int, input().split()))
 
 res = []
 tmp = 0
-for i in Pi:
-    if i>tmp:
-        tmp = i
+for i in range(1,N):
+    if Pi[i]>Pi[i-1]:
+        tmp += Pi[i]-Pi[i-1]
         res.append(tmp)
-    elif i<tmp:
+    else:
+        res.append(tmp)
         tmp = 0
-        res.clear()
+
+print(max(res))
