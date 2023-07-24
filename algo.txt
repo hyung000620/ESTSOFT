@@ -1,0 +1,3 @@
+This is String. Hello
+This is Int. 3
+This is Float. -1.1

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p { color : blue;}
+        #h {color: red;}
+        span.green {
+            color: green !important
+        }
+        .cus {
+            color: orange;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="h">
+        <p class="cus">Hello</p>
+        <span class="green">World</span>
+    </div>
+</body>
+<script>
+    let text = document.getElementById("h");
+    text.style.color = "purple";
+    text
+</script>
+</html>
