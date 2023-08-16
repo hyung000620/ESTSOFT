@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    장고 첫 페이지
+    <header>
+        {% include 'main/header.html' %}
+    </header>
+    <main>
+        {% if is_logined %}
+            <div>{{ name|lower }}님 안녕하세요. <a href="{% url 'logout' %}">로그아웃</a></div>
+        {% else%}
+            <div><a href="{% url 'login' %}">로그인</a></div>
+        {% endif %}
+        장고 첫 페이지
+        <ul>
+            {% for item in items%}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'page' %}">페이지 1로 이동</a>
+        <a href="{% url 'page2' %}">페이지 2로 이동</a>
+    </main>
+    
 </body>
 </html>
