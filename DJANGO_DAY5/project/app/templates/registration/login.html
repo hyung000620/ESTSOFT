@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    <h2>로그인</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">로그인</button>
+    </form>
+    <p>아직 회원이 아니신가요? <a href="{% url 'register' %}">회원가입</a></p>
+</body>
+</html>
