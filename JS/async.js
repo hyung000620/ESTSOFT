@@ -1,7 +1,7 @@
 function wakeUp() {
     console.log("아침에 일어나서 강의듣기!");
 }
-
+// test
 function eatLunch() {
     return new Promise(resolve => {
         setTimeout(function() {
